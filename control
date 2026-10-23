@@ -3,8 +3,8 @@ Name: MailtoSpark
 Version: 1.0.0
 Architecture: iphoneos-arm64
 Description: Intercepts mailto: URLs system-wide and routes them to Spark
-Author: ENI
-Maintainer: ENI
+Author: lewish
+Maintainer: lewish
 Section: Tweaks
 Depends: firmware (>= 15.0), xyz.rizin.ellekit | mobilesubstrate
-Tag: role::hacker
+Tag: role::jailbreak tweak
