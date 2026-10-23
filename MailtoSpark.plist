@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Filter</key>
+    <dict>
+        <key>Bundles</key>
+        <array>
+            <!-- Load into every UIKit process — catches mailto: triggers
+                 from Sileo, Safari, third-party apps, and system sheets alike. -->
+            <string>com.apple.UIKit</string>
+        </array>
+    </dict>
+</dict>
+</plist>
