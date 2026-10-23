@@ -1,24 +1,7 @@
 #import <UIKit/UIKit.h>
 
-@interface LSApplicationWorkspace : NSObject
-+ (instancetype)defaultWorkspace;
-- (id)applicationProxyForIdentifier:(NSString *)bundleIdentifier;
-@end
-
-static BOOL SparkIsAvailable(void) {
-    @try {
-        Class cls = NSClassFromString(@"LSApplicationWorkspace");
-        if (!cls) return NO;
-        id ws = [cls performSelector:@selector(defaultWorkspace)];
-        return ws && [ws performSelector:@selector(applicationProxyForIdentifier:) withObject:@"com.readdle.smartemail"] != nil;
-    } @catch (NSException *e) {
-        return NO;
-    }
-}
-
 static NSURL *_Nullable SparkURLFromMailto(NSURL *url) {
     if (!url || ![url.scheme.lowercaseString isEqualToString:@"mailto"]) return nil;
-    if (!SparkIsAvailable()) return nil;
 
     NSURLComponents *mailto = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
     if (!mailto) return nil;
