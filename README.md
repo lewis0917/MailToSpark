@@ -4,7 +4,7 @@ If you previously uninstalled Apple’s Mail app, you might find this popup frus
 
 <img width="828" height="497" alt="image" src="https://github.com/user-attachments/assets/5c012e78-0b81-4d28-9c6a-94135cd049fd" />
 
-With this tweak, redirects system `mailto:` links to Spark Mail (`com.readdle.smartemail`).
+This tweak redirects system `mailto:` links to Spark Mail (`com.readdle.smartemail`).
 
 ---
 
