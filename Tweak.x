@@ -90,18 +90,19 @@ static NSURL *_Nullable SparkURLFromMailto(NSURL *url) {
 %hook UIApplication
 
 // iOS 10+: primary URL-open path — void return, async completion block.
-// This is what every modern app and framework calls; hook this first.
 - (void)openURL:(NSURL *)url
-        options:(NSDictionary<UIApplicationOpenExternalURLOptionsKey, id> *)options
+            options:(NSDictionary *)options
 completionHandler:(void (^)(BOOL))completion {
 
     NSURL *redirected = SparkURLFromMailto(url);
-    if (redirected) { %orig(redirected, options, completion); return; }
+    if (redirected) { 
+        %orig(redirected, options, completion); 
+        return; 
+    }
     %orig;
 }
 
 // Pre-iOS 10 legacy path — BOOL return, no options dict.
-// Older SDK callers and some system frameworks still invoke this directly.
 - (BOOL)openURL:(NSURL *)url {
     NSURL *redirected = SparkURLFromMailto(url);
     if (redirected) return %orig(redirected);
