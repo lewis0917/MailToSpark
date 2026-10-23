@@ -25,5 +25,5 @@ jobs:
       - name: Upload .deb Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SparkMailtoRedirect-deb
+          name: MailtoSpark-deb
           path: packages/*.deb
