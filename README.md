@@ -13,7 +13,7 @@ This tweak redirects system `mailto:` links to Spark Mail (`com.readdle.smartema
 * **iOS:** iOS 15.0 – iOS 18.x
 * **Architecture:** `arm64` / `arm64e`
 * **Jailbreak:** Rootless (Dopamine, Palera1n)
-* **Dependency:** ElleKit
+* **Dependency:** ElleKit, Spark Mail
 
 ---
 
