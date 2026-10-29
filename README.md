@@ -26,7 +26,7 @@ This tweak redirects system `mailto:` links to Spark Mail (`com.readdle.smartema
 
 ## Installation
 
-1. Download the latest `.deb` from [Releases](../../releases).
+1. Download the `.deb` from [Releases](../../releases).
 2. Install via **Sileo**, **Zebra**, or **Filza**.
 3. Respring.
 
